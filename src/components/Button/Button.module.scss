@@ -1,0 +1,17 @@
+.button {
+  font-size: 1.8rem;
+  background: #eb4a47;
+  border: 2px solid white;
+  padding: 16px 24px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
