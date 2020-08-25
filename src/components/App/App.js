@@ -11,8 +11,6 @@ const App = () => {
     retryDelay: 1000,
   })
 
-  console.log(status)
-
   return (
     <main className={styles.main}>
       <h1>Random Chuck Norris Joke Generator</h1>
