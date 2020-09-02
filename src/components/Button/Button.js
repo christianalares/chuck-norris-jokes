@@ -1,9 +1,16 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './Button.module.scss'
 
-const Button = ({ children, ...props }) => {
+const Button = ({ children, fullWidth, className, ...props }) => {
   return (
-    <button className={styles.button} {...props}>
+    <button
+      className={cn(styles.button, {
+        [styles.fullWidth]: fullWidth,
+        [className]: !!className,
+      })}
+      {...props}
+    >
       {children}
     </button>
   )

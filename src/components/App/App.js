@@ -13,18 +13,27 @@ const App = () => {
 
   return (
     <main className={styles.main}>
-      <h1>Random Chuck Norris Joke Generator</h1>
-      {status === 'loading' ? (
-        <p>Loading...</p>
-      ) : status === 'error' ? (
-        <p className={styles.error}>Error: {error.message}</p>
-      ) : (
-        <p className={styles.joke}>{status === 'loading' ? 'Loading...' : data.joke}</p>
-      )}
+      <div className={styles.flexWrapper}>
+        <div>
+          <h1>Random Chuck Norris Joke Generator</h1>
+        </div>
 
-      <Button disabled={status === 'loading'} onClick={refetch}>
-        Another one!
-      </Button>
+        <div>
+          {status === 'loading' ? (
+            <p>Loading...</p>
+          ) : status === 'error' ? (
+            <p className={styles.error}>Error: {error.message}</p>
+          ) : (
+            <p className={styles.joke}>{status === 'loading' ? 'Loading...' : data.joke}</p>
+          )}
+        </div>
+
+        <div>
+          <Button fullWidth disabled={status === 'loading'} onClick={refetch}>
+            Another one!
+          </Button>
+        </div>
+      </div>
     </main>
   )
 }
